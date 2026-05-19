@@ -14,8 +14,9 @@ body { font-family: 'Nunito', sans-serif; color: #e2e8f0; background: #0b1526; }
 /* ═══ NAV ═══ */
 nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(11,21,38,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.08); padding: 0 24px; transition: all 0.3s; }
 nav .nav-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 56px; }
-nav .logo { font-size: 18px; font-weight: 900; color: #f97316; letter-spacing: 0.02em; }
-nav .logo span { color: #60a5fa; }
+nav .logo { font-size: 18px; font-weight: 900; color: white; letter-spacing: 0.02em; }
+nav .logo span { color: white; }
+nav .logo .logo-er { font-size: 22px; color: white; }
 nav .menu { display: flex; gap: 6px; flex-wrap: wrap; }
 nav .menu a { color: #94a3b8; text-decoration: none; font-size: 12px; font-weight: 700; padding: 6px 12px; border-radius: 6px; transition: all 0.2s; text-transform: uppercase; letter-spacing: 0.05em; }
 nav .menu a:hover, nav .menu a.active { color: white; background: rgba(249,115,22,0.2); }
@@ -26,10 +27,9 @@ nav .menu a:hover, nav .menu a.active { color: white; background: rgba(249,115,2
 .hero-bg { position: absolute; inset: 0; background: url('img_hero.png') center/cover no-repeat; }
 .hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(11,21,38,0.7) 0%, rgba(11,21,38,0.3) 40%, rgba(11,21,38,0.1) 70%, transparent 100%); }
 .hero-content { position: relative; z-index: 2; text-align: left; padding: 40px 24px; max-width: 1000px; width: 100%; margin: 0 auto; }
-.hero-content h1 { font-size: 52px; font-weight: 900; color: white; line-height: 1.1; margin-bottom: 0; }
-.hero-content h1 .er { font-size: 68px; }
-.hero-content .logo-line { max-width: 340px; margin: 6px 0 18px; }
-.hero-content .logo-line img { width: 100%; display: block; }
+.hero-content h1 { font-size: 52px; font-weight: 900; color: white; line-height: 1.1; margin-bottom: 16px; }
+.hero-content h1 span { color: white; }
+.hero-content h1 .er { font-size: 68px; color: white; }
 .hero-content .subtitle { font-size: 22px; font-weight: 800; color: white; margin-bottom: 24px; text-transform: uppercase; letter-spacing: 0.08em; }
 .hero-content .desc { font-size: 18px; font-weight: 700; color: #cbd5e1; line-height: 1.6; margin-bottom: 32px; }
 .hero-btn { display: inline-block; padding: 14px 32px; background: #f97316; color: white; text-decoration: none; font-weight: 800; font-size: 14px; border-radius: 30px; text-transform: uppercase; letter-spacing: 0.08em; transition: all 0.3s; }
@@ -109,7 +109,6 @@ footer p { font-size: 12px; color: #475569; line-height: 1.6; }
   .hero-content h1 { font-size: 32px; }
   .hero-content h1 .er { font-size: 44px; }
   .hero-content .subtitle { font-size: 16px; }
-  .hero-content .logo-line { max-width: 240px; }
   .about-grid { grid-template-columns: 1fr; }
   .features { grid-template-columns: 1fr; }
   .resources-grid { grid-template-columns: 1fr; }
@@ -122,7 +121,7 @@ footer p { font-size: 12px; color: #475569; line-height: 1.6; }
 <!-- ═══ NAV ═══ -->
 <nav>
   <div class="nav-inner">
-    <div class="logo">PREVENSUI<span>C_</span><span style="color:#f97316;font-size:22px;">ER</span></div>
+    <div class="logo">PREVENSUI<span>C_</span><span class="logo-er">ER</span></div>
     <button class="hamburger" onclick="document.querySelector('.menu').classList.toggle('open')">☰</button>
     <div class="menu">
       <a href="#about">Qué es</a>
@@ -140,8 +139,7 @@ footer p { font-size: 12px; color: #475569; line-height: 1.6; }
 <section class="hero" id="inicio">
   <div class="hero-bg"></div>
   <div class="hero-content">
-    <h1 style="color:white;">PREVENSUI<span style="color:white;">C_</span><span class="er" style="color:white;">ER</span></h1>
-    <div class="logo-line"><img src="img_linea.png" alt=""></div>
+    <h1>PREVENSUI<span>C_</span><span class="er">ER</span></h1>
     <div class="subtitle">Tú puedes ayudar a prevenir el suicidio</div>
     <p class="desc">Plataforma de conocimiento, herramientas y recursos para profesionales de emergencias prehospitalarias y primeros intervinientes.</p>
     <a href="#about" class="hero-btn">Explora la plataforma</a>
