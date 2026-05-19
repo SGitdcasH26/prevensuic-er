@@ -24,11 +24,12 @@ nav .menu a:hover, nav .menu a.active { color: white; background: rgba(249,115,2
 /* ═══ HERO ═══ */
 .hero { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; padding-top: 56px; }
 .hero-bg { position: absolute; inset: 0; background: url('img_hero.png') center/cover no-repeat; }
-.hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(11,21,38,0.75) 0%, rgba(11,21,38,0.4) 50%, rgba(11,21,38,0.8) 100%); }
-.hero-content { position: relative; z-index: 2; text-align: center; padding: 40px 24px; max-width: 700px; }
-.hero-content h1 { font-size: 48px; font-weight: 900; color: white; line-height: 1.1; margin-bottom: 8px; }
-.hero-content h1 .orange { color: #f97316; }
-.hero-content h1 .blue { color: #60a5fa; }
+.hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(11,21,38,0.7) 0%, rgba(11,21,38,0.3) 40%, rgba(11,21,38,0.1) 70%, transparent 100%); }
+.hero-content { position: relative; z-index: 2; text-align: left; padding: 40px 24px; max-width: 1000px; width: 100%; margin: 0 auto; }
+.hero-content h1 { font-size: 52px; font-weight: 900; color: white; line-height: 1.1; margin-bottom: 0; }
+.hero-content h1 .er { font-size: 68px; }
+.hero-content .logo-line { max-width: 340px; margin: 6px 0 18px; }
+.hero-content .logo-line img { width: 100%; display: block; }
 .hero-content .subtitle { font-size: 20px; font-weight: 700; color: #fbbf24; margin-bottom: 24px; text-transform: uppercase; letter-spacing: 0.08em; }
 .hero-content .desc { font-size: 16px; color: #cbd5e1; line-height: 1.6; margin-bottom: 32px; }
 .hero-btn { display: inline-block; padding: 14px 32px; background: #f97316; color: white; text-decoration: none; font-weight: 800; font-size: 14px; border-radius: 30px; text-transform: uppercase; letter-spacing: 0.08em; transition: all 0.3s; }
@@ -42,26 +43,39 @@ section { padding: 80px 24px; }
 .section-desc { font-size: 15px; color: #94a3b8; line-height: 1.7; margin-bottom: 32px; max-width: 700px; }
 
 /* Alternating backgrounds */
-.bg-dark { background: #0b1526; }
-.bg-darker { background: #070f1d; }
-.bg-gradient { background: linear-gradient(180deg, #0b1526 0%, #0f1d32 100%); }
-.bg-orange-dark { background: linear-gradient(135deg, #1a0f00 0%, #1c1006 100%); }
+.bg-dark { background: #0e1a2e; }
+.bg-light-orange { background: #fff4ea; color: #1f2937; }
+.bg-light-orange .section-tag { color: #c2410c; }
+.bg-light-orange .section-title { color: #0f172a; }
+.bg-light-orange .section-desc { color: #57534e; }
+.bg-blue { background: #121d33; }
+.bg-gradient { background: linear-gradient(180deg, #0e1a2e 0%, #162035 100%); }
+.bg-orange-warm { background: #fff8f1; color: #1f2937; }
+.bg-orange-warm .section-tag { color: #c2410c; }
+.bg-orange-warm .section-title { color: #0f172a; }
+.bg-orange-warm .section-desc { color: #57534e; }
+.bg-orange-warm .resource-card { background: rgba(0,0,0,0.03); border-color: rgba(0,0,0,0.1); }
+.bg-orange-warm .resource-card h3 { color: #0f172a; }
+.bg-orange-warm .resource-card p { color: #57534e; }
+.bg-orange-warm .resource-card:hover { border-color: #f97316; background: rgba(249,115,22,0.08); }
+.bg-orange-warm .map-caption { color: #78716c; }
 
 /* ═══ ABOUT ═══ */
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
 .about-img { border-radius: 16px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.4); }
 .about-img img { width: 100%; display: block; }
-.about-text h3 { font-size: 22px; font-weight: 800; color: white; margin-bottom: 12px; }
-.about-text p { font-size: 14px; color: #94a3b8; line-height: 1.7; margin-bottom: 16px; }
+.about-text h3 { font-size: 22px; font-weight: 800; color: #0f172a; margin-bottom: 12px; }
+.about-text p { font-size: 14px; color: #57534e; line-height: 1.7; margin-bottom: 16px; }
 .features { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 24px; }
-.feature { padding: 16px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; }
+.feature { padding: 16px; background: rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.08); border-radius: 10px; }
 .feature .icon { font-size: 22px; margin-bottom: 6px; }
-.feature .feat-title { font-size: 13px; font-weight: 700; color: #f97316; margin-bottom: 4px; }
-.feature .feat-desc { font-size: 12px; color: #94a3b8; line-height: 1.5; }
+.feature .feat-title { font-size: 13px; font-weight: 700; color: #c2410c; margin-bottom: 4px; }
+.feature .feat-desc { font-size: 12px; color: #57534e; line-height: 1.5; }
 
 /* ═══ EMBED SECTIONS ═══ */
-.embed-wrapper { border-radius: 12px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.06); background: #0f1d32; }
+.embed-wrapper { border-radius: 12px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.15); border: 1px solid rgba(0,0,0,0.08); background: white; }
 .embed-wrapper iframe { width: 100%; border: none; display: block; }
+.bg-blue .embed-wrapper { box-shadow: 0 4px 24px rgba(0,0,0,0.3); border-color: rgba(255,255,255,0.06); }
 
 /* ═══ RESOURCES ═══ */
 .resources-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
@@ -80,8 +94,8 @@ section { padding: 80px 24px; }
 .qr-img { width: 200px; height: 200px; background: white; border-radius: 16px; padding: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
 .qr-img img { width: 100%; height: 100%; }
 .qr-text { max-width: 400px; }
-.qr-text h3 { font-size: 20px; font-weight: 800; color: white; margin-bottom: 10px; }
-.qr-text p { font-size: 14px; color: #94a3b8; line-height: 1.7; }
+.qr-text h3 { font-size: 20px; font-weight: 800; color: #0f172a; margin-bottom: 10px; }
+.qr-text p { font-size: 14px; color: #57534e; line-height: 1.7; }
 
 /* ═══ FOOTER ═══ */
 footer { padding: 32px 24px; background: #060d18; border-top: 1px solid rgba(255,255,255,0.06); text-align: center; }
@@ -93,7 +107,9 @@ footer p { font-size: 12px; color: #475569; line-height: 1.6; }
   nav .menu.open { display: flex; }
   .hamburger { display: block; }
   .hero-content h1 { font-size: 32px; }
+  .hero-content h1 .er { font-size: 44px; }
   .hero-content .subtitle { font-size: 16px; }
+  .hero-content .logo-line { max-width: 240px; }
   .about-grid { grid-template-columns: 1fr; }
   .features { grid-template-columns: 1fr; }
   .resources-grid { grid-template-columns: 1fr; }
@@ -124,7 +140,8 @@ footer p { font-size: 12px; color: #475569; line-height: 1.6; }
 <section class="hero" id="inicio">
   <div class="hero-bg"></div>
   <div class="hero-content">
-    <h1><span class="orange">PREVENSUI</span><span class="blue">C_</span><span class="orange">ER</span></h1>
+    <h1>PREVENSUI<span>C_</span><span class="er">ER</span></h1>
+    <div class="logo-line"><img src="img_linea.png" alt=""></div>
     <div class="subtitle">Tú puedes ayudar a prevenir el suicidio</div>
     <p class="desc">Plataforma de conocimiento, herramientas y recursos para profesionales de emergencias prehospitalarias y primeros intervinientes.</p>
     <a href="#about" class="hero-btn">Explora la plataforma</a>
@@ -132,7 +149,7 @@ footer p { font-size: 12px; color: #475569; line-height: 1.6; }
 </section>
 
 <!-- ═══ ABOUT ═══ -->
-<section class="bg-gradient" id="about">
+<section class="bg-light-orange" id="about">
   <div class="container">
     <div class="about-grid">
       <div class="about-img">
@@ -171,7 +188,7 @@ footer p { font-size: 12px; color: #475569; line-height: 1.6; }
 </section>
 
 <!-- ═══ MITOS ═══ -->
-<section class="bg-darker" id="mitos">
+<section class="bg-blue" id="mitos">
   <div class="container">
     <div class="section-tag">Aprende la diferencia</div>
     <div class="section-title">Mitos y Realidades sobre el Suicidio</div>
@@ -183,7 +200,7 @@ footer p { font-size: 12px; color: #475569; line-height: 1.6; }
 </section>
 
 <!-- ═══ DATOS ═══ -->
-<section class="bg-dark" id="datos">
+<section class="bg-light-orange" id="datos">
   <div class="container">
     <div class="section-tag">El suicidio en datos</div>
     <div class="section-title">Una Realidad que No Podemos Ignorar</div>
@@ -195,7 +212,7 @@ footer p { font-size: 12px; color: #475569; line-height: 1.6; }
 </section>
 
 <!-- ═══ RECURSOS EXTERNOS ═══ -->
-<section class="bg-orange-dark" id="recursos-ext">
+<section class="bg-blue" id="recursos-ext">
   <div class="container">
     <div class="section-tag">Otros recursos y referencias de interés</div>
     <div class="section-title">Organizaciones de Referencia</div>
@@ -220,7 +237,7 @@ footer p { font-size: 12px; color: #475569; line-height: 1.6; }
 </section>
 
 <!-- ═══ CONSULTA ═══ -->
-<section class="bg-darker" id="consulta">
+<section class="bg-orange-warm" id="consulta">
   <div class="container">
     <div class="section-tag">Haz tu consulta aquí</div>
     <div class="section-title">Agente de Consulta PREVENSUIC_ER</div>
@@ -232,7 +249,7 @@ footer p { font-size: 12px; color: #475569; line-height: 1.6; }
 </section>
 
 <!-- ═══ GUÍA RÁPIDA ═══ -->
-<section class="bg-dark" id="guia">
+<section class="bg-blue" id="guia">
   <div class="container">
     <div class="section-tag">Guía rápida</div>
     <div class="section-title">Atención a la Persona con Conducta Suicida</div>
@@ -244,7 +261,7 @@ footer p { font-size: 12px; color: #475569; line-height: 1.6; }
 </section>
 
 <!-- ═══ RECURSOS DE AYUDA ═══ -->
-<section class="bg-gradient" id="ayuda">
+<section class="bg-light-orange" id="ayuda">
   <div class="container" style="text-align:center;">
     <div class="section-tag">Recursos de ayuda para la prevención del suicidio</div>
     <div class="section-title">No estás solo. No estás sola.</div>
@@ -265,6 +282,7 @@ footer p { font-size: 12px; color: #475569; line-height: 1.6; }
 <!-- ═══ FOOTER ═══ -->
 <footer>
   <p>© PREVENSUIC_ER — Todos los contenidos tienen carácter informativo y formativo con el objetivo de contribuir al conocimiento y sensibilización de los profesionales sanitarios del ámbito de la urgencia/emergencia prehospitalaria.</p>
+  <p style="margin-top:8px;">Esta web ha sido creada por <strong>Susana de Castro García</strong>, con asistencia de herramientas de Inteligencia Artificial.</p>
 </footer>
 
 <script>
